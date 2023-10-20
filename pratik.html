@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Counter App</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #count {
+            font-size: 48px;
+            color: #007bff;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interactive Counter App</h1>
+    <p>Count: <span id="count">0</span></p>
+    <button id="incrementButton">Increment</button>
+    <button id="decrementButton">Decrement</button>
+    <button id="resetButton">Reset</button>
+
+    <script>
+        const countElement = document.getElementById("count");
+        const incrementButton = document.getElementById("incrementButton");
+        const decrementButton = document.getElementById("decrementButton");
+        const resetButton = document.getElementById("resetButton");
+
+        let count = 0;
+
+        incrementButton.addEventListener("click", () => {
+            count++;
+            countElement.textContent = count;
+        });
+
+        decrementButton.addEventListener("click", () => {
+            count--;
+            countElement.textContent = count;
+        });
+
+        resetButton.addEventListener("click", () => {
+            count = 0;
+            countElement.textContent = count;
+        });
+    </script>
+</body>
+</html>
